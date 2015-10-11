@@ -12,7 +12,7 @@ angular.module('reusableApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
 
     var todosInStore = localStorageService.get('todos');
-
+    localStorage.clear();
     $scope.todos = todosInStore || [];
 
     $scope.$watch('todos', function () {
